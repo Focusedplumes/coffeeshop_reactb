@@ -1,8 +1,9 @@
 import React from 'react'
 import Navbar from './Navbar'
 import Header from './Header'
-import CardsHome from './CardsHome'
+import MenuItems from './MenuItems'
 import Contact from './Contact'
+
 
 
 export default function Home() {
@@ -10,7 +11,7 @@ export default function Home() {
     <>
     <Navbar />
     <Header />
-    <CardsHome />
+    <MenuItems />
     <Contact />
     </>
   )
