@@ -1,5 +1,6 @@
 # coffeeshop_reactb
 # previous version broke
+# node should be installed on computer
 
 # coffeeshop_react
 
@@ -9,7 +10,7 @@
 # install react router dom: npm i react-router-dom
 # Start your app, first cd into your project name first: cd clickercompany, then run npm start and this will open your web app in localhost:3000 on the browser.
 # When adding compoments, componets are typed in Cap first and folder names care lower case.
-# rcf to get react base code on documents
+# rfc to get react base code on documents
 
 # most of the world uses functional componets. components are functions.
 # command + d for getting bunch of components
