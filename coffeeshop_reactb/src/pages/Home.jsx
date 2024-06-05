@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from './Navbar'
+import Navbar from '../components/Navbar'
 import Header from './Header'
 import MenuItems from './MenuItems'
 import Contact from './Contact'

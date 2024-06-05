@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider, } from 'react-router-dom';
 import React from 'react';
 import Layout from './components/Layout'
 // import './components/Home';
-import Home from './components/Home';
+import Home from './pages/Home';
 import Weather from './components/Weather';
 
 const router = createBrowserRouter([
@@ -18,8 +18,6 @@ function App() {
   const weatherApiKey = 'dc607689992b371fbab3d718fb9f6e3b';
   const [userCity, setUserCity] = useState(null)
   const [currentTemp, setCurrentTemp] = useState(null) 
- 
- 
 
  useEffect(() => {
     if ("geolocation" in navigator) {
@@ -57,7 +55,7 @@ function App() {
 
   return (
     <div className="App">
-      
+      <Home />
       <Weather currentTemp={currentTemp} userCity={userCity} />
     </div>
   );

@@ -1,5 +1,5 @@
 import React from 'react'
-import HeaderArt from './images/coffeeShopInterior.jpg'
+import HeaderArt from './images/coffeeShopInterior.jpg';
 
 export default function Header() {
   return (
