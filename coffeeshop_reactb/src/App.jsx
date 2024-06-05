@@ -1,8 +1,18 @@
-import {useState, useEffect} from 'react';
 import './App.css';
+import {useState, useEffect} from 'react';
+import { createBrowserRouter, RouterProvider, } from 'react-router-dom';
+import React from 'react';
+import Layout from './components/Layout'
 // import './components/Home';
 import Home from './components/Home';
 import Weather from './components/Weather';
+
+const router = createBrowserRouter([
+  {
+    path: "/home",
+    element: <Layout />
+  }
+])
 
 function App() {
   const weatherApiKey = 'dc607689992b371fbab3d718fb9f6e3b';
@@ -47,7 +57,7 @@ function App() {
 
   return (
     <div className="App">
-      <Home />
+      
       <Weather currentTemp={currentTemp} userCity={userCity} />
     </div>
   );
