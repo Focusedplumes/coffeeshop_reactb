@@ -14,7 +14,7 @@ const router = createBrowserRouter([
   }
 ])
 
-// function App() {
+function App() {
 //   const weatherApiKey = '';
 //   const [userCity, setUserCity] = useState(null)
 //   const [currentTemp, setCurrentTemp] = useState(null) 
@@ -53,12 +53,12 @@ const router = createBrowserRouter([
 //     setCurrentTemp(Math.round(jsonData.main.temp))
 //   }
 
-//   return (
-//     <div className="App">
-//       <Home />
-//       <Weather currentTemp={currentTemp} userCity={userCity} />
+  return (
+    <div className="App">
+      <Home />
+{/* //       <Weather currentTemp={currentTemp} userCity={userCity} /> */}
 //     </div>
-//   );
-// }
+  );
+}
 
 export default App;
