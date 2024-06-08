@@ -10,8 +10,8 @@ export default function Menu() {
     <div className='item-container'>
         {fakeMenuItems.map(item => (
         <> <div className='item'>
-            <div key={item.id}>{item.itemName}</div>
-            <div>{item.description} Price: {item.price}</div>
+            <div key={item.id} className="item-names">{item.itemName}</div>
+            <div className='item-description'>{item.description} Price: {item.price}</div>
             <img src={item.imageUrl} alt={item.itemName} className='item-img' />
             </div>
             </>

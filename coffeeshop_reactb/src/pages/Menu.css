@@ -14,12 +14,18 @@
     margin-top: 20px;
   }
   
-  .item-details h1 {
-    color: #ff6347;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+  .item-names {
+    color: #310302;
+    font-size: 2rem;
+    /* margin-bottom: 10px; */
   }
   
+  .item-description {
+    color: #000000;
+    font-size: 1.15rem;
+    /* margin-bottom: 10px; */
+  }
+
   .item-img {
     width: 200px;
     height: auto;
