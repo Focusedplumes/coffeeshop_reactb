@@ -1,10 +1,10 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
-// import './Nav.css';
+import { Link, useNavigate } from 'react-router-dom'
+import './Nav.css';
 
 
 const Navbar = () => {
-  // const navigate = useNavigate(); //in case I want to create my own links instead of using bootstrap elements
+   //const navigate = useNavigate(); //in case I want to create my own links instead of using bootstrap elements
 
   return (
     <div className='navbar' role="navigation">
@@ -17,12 +17,12 @@ const Navbar = () => {
             </button>
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav">
-                <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="#">Home</a>
+              <li className="nav-item" >
+                <Link className='nav-link remove-underline' to={"/home"} > Home </Link>
                 </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">Menu</a>
-                </li>
+                <li className="nav-item" >
+                  <Link className='nav-link remove-underline' to={"/menu"} > Menu </Link>
+                  </li>
                 <li className="nav-item">
                   <a className="nav-link" href="#">Cart</a>
                 </li>

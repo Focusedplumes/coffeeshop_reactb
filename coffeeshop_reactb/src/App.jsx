@@ -1,17 +1,31 @@
-import './App.css';
 import {useState, useEffect} from 'react';
 import { createBrowserRouter, RouterProvider, } from 'react-router-dom';
 import React from 'react';
+import './App.css';
 import Layout from './components/Layout'
 // import './components/Home';
 import Home from './pages/Home';
+import Menu from './pages/Menu';
 import Weather from './components/Weather';
 
 const router = createBrowserRouter([
   {
-    path: "/home",
-    element: <Layout />
-  }
+    path: "/",
+    element: <Layout />,
+    children: [
+      { path: "", element: <Home />},
+      { path: "menu", element: <Menu />},
+    ]
+  },
+  {
+    path: "/menu",
+    element: <Menu />,
+    
+  },
+  // {
+  //   path: "/home",
+  //   element: <Home />
+  // }
 ])
 
 function App() {
@@ -54,10 +68,12 @@ function App() {
 //   }
 
   return (
-    <div className="App">
-      <Home />
+    <div>
+      
+      <RouterProvider router={router} />
+      
 {/* //       <Weather currentTemp={currentTemp} userCity={userCity} /> */}
-//     </div>
+    </div>
   );
 }
 
