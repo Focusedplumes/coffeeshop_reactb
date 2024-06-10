@@ -7,6 +7,7 @@ import Layout from './components/Layout'
 import Home from './pages/Home';
 import Menu from './pages/Menu';
 import Weather from './components/Weather';
+import ShoppingCart from './pages/ShoppingCart';
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
     element: <Menu />,
     
   },
+  {
+    path: "/ShoppingCart",
+    element: <ShoppingCart />,
+  }
   // {
   //   path: "/home",
   //   element: <Home />
