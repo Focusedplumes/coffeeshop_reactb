@@ -11,21 +11,6 @@ import React from 'react'
 
 // - example
 
-export default function ShoppingCart() {
-  return (
-    <div>ShoppingCart</div>
-    const [menuItems, setMenuItems] = useState([]);
-  const [shoppingCart, setShoppingCart] = useState([]);
-
-    const updateShoppingCart = (shoppingCartItem) => {
-    setShoppingCart([...shoppingCart, shoppingCartItem]);
-  };
-      <Navbar shoppingCart={shoppingCart} /> // keep passing this down till it gets to your shopping cart component
-
-      <Body 
-        updateShoppingCart={updateShoppingCart} //keep passing this down until it gets to your menu item component
-        --other props--
-      />
 
 
 menu item component // remember to take it props
