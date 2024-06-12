@@ -8,6 +8,9 @@ import Home from './pages/Home';
 import Menu from './pages/Menu';
 import Weather from './components/Weather';
 import ShoppingCart from './pages/ShoppingCart';
+import { fakeMenuItems } from './fakeData';
+import Navbar from './components/Navbar';
+import Body from './components/Body';
 
 const router = createBrowserRouter([
   {
@@ -34,6 +37,29 @@ const router = createBrowserRouter([
 ])
 
 function App() {
+
+  const [menuItems, setMenuItems] = useState([]);
+  const [shoppingCart, setShoppingCart] = useState([]);
+
+    const updateShoppingCart = (shoppingCartItem) => {
+    setShoppingCart([...shoppingCart, shoppingCartItem]);
+  };
+
+  return (
+    <div>
+      <Navbar shoppingCart={shoppingCart} />
+
+      <Body 
+        updateShoppingCart={updateShoppingCart} //keep passing this down until it gets to your menu item component
+        //--other props--
+      />
+   </div>,
+   <div>
+    <RouterProvider router={router} />
+   </div>
+ );    
+}
+
 //   const weatherApiKey = '';
 //   const [userCity, setUserCity] = useState(null)
 //   const [currentTemp, setCurrentTemp] = useState(null) 
@@ -72,31 +98,14 @@ function App() {
 //     setCurrentTemp(Math.round(jsonData.main.temp))
 //   }
 
-  return (
-    <div>
+
+//     <div>
       
-      <RouterProvider router={router} />
       
-{/* //       <Weather currentTemp={currentTemp} userCity={userCity} /> */}
-    </div>
-  );
-}
+      
+// {/* //       <Weather currentTemp={currentTemp} userCity={userCity} /> */}
+//     </div>
 
-export default function ShoppingCart() {
-  return (
-    <div>ShoppingCart</div>
-    const [menuItems, setMenuItems] = useState([]);
-  const [shoppingCart, setShoppingCart] = useState([]);
-
-    const updateShoppingCart = (shoppingCartItem) => {
-    setShoppingCart([...shoppingCart, shoppingCartItem]);
-  };
-      <Navbar shoppingCart={shoppingCart} /> // keep passing this down till it gets to your shopping cart component
-
-      <Body 
-        updateShoppingCart={updateShoppingCart} //keep passing this down until it gets to your menu item component
-        --other props--
-      />
 
 export default App;
 

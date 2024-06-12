@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+
 
 //steps for shopping cart
 // - create shopping cart state in parent
@@ -13,24 +14,16 @@ import React from 'react'
 
 
 
-menu item component // remember to take it props
-
-  const addToCart = () => {
-    props.updateShoppingCart(props.item);
-  };
-  
-   <button onClick={addToCart}>Add To Cart</button>
-
-shopping cart component // remember to take in props
-
-<div>
-    {props.shoppingCart && props.shoppingCart.length > 0 ? (
-        props.shoppingCart.map(cartItem => (
-        <p key={cartItem.id}>{`${cartItem.item}-$${cartItem.price}`}</p>
-        ))
-    ) : (
-        <p>You have no items in the cart</p>
-    )}
-</div> 
-  )
+function ShoppingCart({ shoppingCart }) {// remember to take in props
+  return(
+      <div>
+          {shoppingCart && shoppingCart.length > 0 ? (
+              shoppingCart.map(cartItem => (
+              <p key={cartItem.id}>{`${cartItem.item}-$${cartItem.price}`}</p>
+              ))
+          ) : (
+              <p>You have no items in the cart</p>
+          )}
+      </div> 
+  );
 }

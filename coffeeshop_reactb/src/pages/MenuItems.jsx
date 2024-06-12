@@ -30,3 +30,11 @@ export default function MenuItems({image, altText, price, item}) {
     </div>
   )
 }
+
+function MenuItem({ item, updateShoppingCart }){
+const addToCart = () => {
+  updateShoppingCart(item);
+};
+
+ <button onClick={addToCart}>Add To Cart</button>
+};

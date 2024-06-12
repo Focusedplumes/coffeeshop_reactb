@@ -1,10 +1,11 @@
 import React from 'react'
 import './Menu.css';
 import { fakeMenuItems } from '../fakeData'
+import MenuItem from './MenuItems'; //do not change this
 
 
 
-export default function Menu() {
+export default function Menu({ menuItems, updateShoppingCart }) {
   return (
     
     <div className='item-container'>
@@ -16,9 +17,19 @@ export default function Menu() {
             </div>
             </>
             
-        ))}
+        ))},
+
+<div className='item-container'>
+      {menuItems.map(item => (
+        <MenuItem 
+          key={item.id} 
+          item={item} 
+          updateShoppingCart={updateShoppingCart} 
+        />
+      ))}
+    </div>
   </div>
   );
-}
+};
 
 
