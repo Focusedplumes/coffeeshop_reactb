@@ -52,6 +52,7 @@ function App() {
       <Body 
         updateShoppingCart={updateShoppingCart} //keep passing this down until it gets to your menu item component
         //--other props--
+        menuItems={fakeMenuItems} // Ensure menuItems is passed here
       />
    </div>,
    <div>

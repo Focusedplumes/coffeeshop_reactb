@@ -5,7 +5,8 @@ import MenuItem from './MenuItems'; //do not change this
 
 
 
-export default function Menu({ menuItems, updateShoppingCart }) {
+export default function Menu({ menuItems = [], updateShoppingCart }) {
+  
   return (
     
     <div className='item-container'>
