@@ -54,6 +54,7 @@ function App() {
         //--other props--
         menuItems={fakeMenuItems} // Ensure menuItems is passed here
       />
+      <ShoppingCart shoppingCart={shoppingCart} />
    </div>,
    <div>
     <RouterProvider router={router} />

@@ -24,7 +24,8 @@ export default function Menu({ menuItems = [], updateShoppingCart }) {
       {menuItems.map(item => (
         <MenuItem 
           key={item.id} 
-          item={item} 
+          item={item}
+          itemName={item.itemName}
           updateShoppingCart={updateShoppingCart} 
         />
       ))}
