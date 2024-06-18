@@ -1,4 +1,20 @@
-import React from 'react'
+import React from 'react';
+import './Menu.css';
+import MenuItem from './MenuItems'; // Import MenuItems
+
+function CartItem({ menuItems, updateShoppingCart }){
+  return (
+    <div className='item-container'>
+      {menuItems.map(item => (
+        <MenuItem 
+          key={item.id} 
+          item={item} 
+          updateShoppingCart={updateShoppingCart} 
+        />
+      ))}
+    </div>
+  );
+}
 
 export default function MenuItems({image, altText, price, item}) {
   return (
@@ -13,7 +29,8 @@ export default function MenuItems({image, altText, price, item}) {
             <div className='card-body'>
               <h5 className='card-title'>{item}</h5>
               <p className='card-text'><small className="text-body-secondary">{`$${price}`}</small></p>
-              <a href="#" className="btn btn-primary">Go To Cart OneDay</a>
+              <a href="http://localhost:3000/ShoppingCart" className="btn btn-primary">Cart</a> {/* // this needs to add item to shopping cart */}
+              
             </div>
           </div>
         </div>
@@ -31,10 +48,7 @@ export default function MenuItems({image, altText, price, item}) {
   )
 }
 
-function MenuItem({ item, updateShoppingCart }){
-const addToCart = () => {
-  updateShoppingCart(item);
-};
 
- <button onClick={addToCart}>Add To Cart</button>
-};
+
+
+
