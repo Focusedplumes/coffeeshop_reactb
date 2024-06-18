@@ -12,3 +12,5 @@ function Body({ updateShoppingCart }) {
         </div>
     );
 }
+
+export default Body;

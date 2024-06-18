@@ -27,3 +27,6 @@ function ShoppingCart({ shoppingCart }) {// remember to take in props
       </div> 
   );
 }
+
+
+export default ShoppingCart;
