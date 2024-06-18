@@ -6,7 +6,7 @@ import MenuItem from './MenuItems'; //do not change this
 
 
 export default function Menu({ menuItems = [], updateShoppingCart }) {
-  
+  // By setting a default value of [] for menuItems, you prevent the undefined error.
   return (
     
     <div className='item-container'>
