@@ -16,7 +16,11 @@ function CartItem({ menuItems, updateShoppingCart }){
   );
 }
 
-export default function MenuItems({image, altText, price, item}) {
+export default function MenuItems({image, altText, price, item, updateShoppingCart}) {
+  const addToCart = () => {
+    updateShoppingCart(item);
+  };
+
   return (
     <div className='col-4'>
         <div className="card mb-3" style={{maxWidth: "270px"}}>
@@ -29,7 +33,8 @@ export default function MenuItems({image, altText, price, item}) {
             <div className='card-body'>
               <h5 className='card-title'>{item}</h5>
               <p className='card-text'><small className="text-body-secondary">{`$${price}`}</small></p>
-              <a href="http://localhost:3000/ShoppingCart" className="btn btn-primary">Cart</a> {/* // this needs to add item to shopping cart */}
+              <button onClick={addToCart} className="btn btn-primary">Add To Cart</button>
+              {/* <a href="http://localhost:3000/ShoppingCart" className="btn btn-primary">Cart</a> // this needs to add item to shopping cart */}
               
             </div>
           </div>
